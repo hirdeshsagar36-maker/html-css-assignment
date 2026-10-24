@@ -1,0 +1,154 @@
+/* ==========================================
+   MODULE 1 & 2: CSS Fundamentals, Box Model & Positioning
+   ========================================== */
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333333;
+    padding: 20px;
+}
+
+/* Header Section (Box Model & Selectors) */
+header {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    position: relative; /* Positioning concept */
+}
+
+.main-heading {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Content Container (Box Model: Width, Padding, Margin, Border) */
+.content-container {
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    padding: 30px;
+    border-left: 5px solid #3498db;
+    border-radius: 6px;
+}
+
+p {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.highlight-text {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Links Styling */
+a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Positioning Example Box */
+.badge-fixed {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #27ae60;
+    color: #ffffff;
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+/* ==========================================
+   MODULE 3 & 4: Flexbox & CSS Grid
+   ========================================== */
+
+/* 3. Flexbox Layout Section */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+    padding: 25px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.flex-item {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* 4. CSS Grid Layout Section */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto 25px auto;
+}
+
+.grid-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid #3498db;
+}
+/* ==========================================
+   MODULE 5: Responsive Design & Media Queries
+   ========================================== */
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
+
+    .flex-item {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-heading {
+        font-size: 1.8rem;
+    }
+}
